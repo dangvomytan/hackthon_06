@@ -1,0 +1,11 @@
+.body_content
+{
+  width: 800px;
+  margin: auto;
+}
+h1
+{
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+}

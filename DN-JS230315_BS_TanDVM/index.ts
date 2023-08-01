@@ -49,3 +49,20 @@ let handleEdit = (index: number) => {
      console.log(index);
      
  }
+
+ let btnEditStudent: any = document.querySelector('#editStudent')
+btnEditStudent.addEventListener('click', function (event: any) {
+    event.preventDefault();
+    if (editIndex !== null) {
+        let name = (document.querySelector('#editName') as HTMLInputElement).value;
+        let age = parseInt((document.querySelector('#editAge') as HTMLInputElement).value);
+        let sex = (document.querySelector('#editSex') as HTMLSelectElement).value == 'Male' ? Sex.MALE : Sex.FEMALE;
+        students[editIndex] = { name: name, age: age, sex: sex };
+        let studentList: any = document.querySelector("tbody");
+        studentList.innerHTML = ""
+        renderStudents(students);
+    }
+    (document.querySelector('#editName') as HTMLInputElement).value = "";
+    (document.querySelector('#editAge') as HTMLInputElement).value = "";
+    (document.querySelector('#editSex') as HTMLSelectElement).value = "Male";
+});
