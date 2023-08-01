@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          body {
+               text-align: center;
+          }
+
+          table {
+               margin: auto;
+               border-collapse: collapse;
+               width: 500px;
+          }
+
+          td {
+               padding: 0.8rem;
+          }
+
+          th {
+               padding: 1.2rem;
+               background-color: blanchedalmond;
+          }
+
+          tr:nth-child(even) {
+               background-color: antiquewhite;
+          }
+          button
+          {
+               background-color: #007bff;
+               color: #fff;
+               padding: 10px 15px;
+               border: none;
+               border-radius: 4px;
+               cursor: pointer;
+          }
+          button:hover
+          {
+               background-color: #0056b3;
+          }
+
+          form {
+               width: 500px;
+               margin: auto;
+               margin-top: 2rem;
+               border: 1px solid #ccc;
+               padding: 20px;
+               border-radius: 8px;
+          }
+
+          /* CSS cho các nhãn (labels) */
+          label {
+               display: block;
+               margin-bottom: 5px;
+               font-weight: bold;
+          }
+
+          /* CSS cho các input và select */
+          input[type="text"],
+          input[type="number"]
+          {
+               width: 95%;
+               padding: 8px;
+               margin-bottom: 15px;
+               border: 1px solid #ccc;
+               border-radius: 4px; 
+          }
+          select {
+               width: 100%;
+               padding: 8px;
+               margin-bottom: 15px;
+               border: 1px solid #ccc;
+               border-radius: 4px;
+          }
+
+          /* CSS cho nút submit */
+          input[type="submit"] {
+               background-color: #007bff;
+               color: #fff;
+               padding: 10px 15px;
+               border: none;
+               border-radius: 4px;
+               cursor: pointer;
+          }
+
+          input[type="submit"]:hover {
+               background-color: #0056b3;
+          }
+     </style>
+</head>
+
+<body>
+     <div id="root"></div>
+     <div>
+          <table>
+               <thead>
+                    <tr>
+                         <th>Name</th>
+                         <th>Age</th>
+                         <th>Sex</th>
+                         <th></th>
+                    </tr>
+               </thead>
+               <tbody id="Student_Tbody">
+
+               </tbody>
+          </table>
+     </div>
+     <div>
+          <form id="updateForm">
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="name" required>
+               <br>
+               <label for="age">Age:</label>
+               <input type="number" id="age" name="age" required>
+               <br>
+               <label for="sex">Sex:</label>
+               <select id="sex" name="sex" required>
+                    <option value="MALE">Male</option>
+                    <option value="FEMALE">Female</option>
+               </select>
+               <br>
+               <input type="submit" value="Update">
+          </form>
+     </div>
+     <script src="./index.js"></script>
+</body>
+
+</html>
